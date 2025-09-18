@@ -14,11 +14,12 @@
           autofocus: true, 
           placeholder: "Enter quote name" 
         }, 
-        label_html: { class: "label-text font-semibold" },
+        label_html: { class: "invisible" },
         wrapper: false %>
   </div>
   
   <div class="form-control">
+    <%= link_to "Cancel", quotes_path, class: "btn btn--light" %>
     <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>

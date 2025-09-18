@@ -4,9 +4,11 @@
         <%= link_to "Back to quote", quote_path(@quote), class: "btn btn-outline" %>
     </div>
 
-    <div class="card bg-base-100 shadow-md">
-        <div class="card-body">
-            <%= render "form", quote: @quote %>
+    <%= turbo_frame_tag @quote do %>
+        <div class="card bg-base-100 shadow-md">
+            <div class="card-body">
+                <%= render "form", quote: @quote %>
+            </div>
         </div>
-    </div>
+    <% end %>
 </div>
