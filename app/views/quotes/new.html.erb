@@ -1,0 +1,12 @@
+<div class="container mx-auto p-6 max-w-4xl">
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">New quote</h1>
+        <%= link_to "Back", quotes_path, class: "btn btn-outline" %>
+    </div>
+
+    <div class="card bg-base-100 shadow-md">
+        <div class="card-body">
+            <%= render "form", quote: @quote %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container mx-auto p-6 max-w-4xl">
+  <%= link_to sanitize("&larr; Back to quotes"), quotes_path, class: "btn btn-outline btn-sm mb-6" %>
+  
+  <div class="card bg-base-100 shadow-md">
+    <div class="card-body">
+      <h1 class="text-3xl font-bold mb-4">
+        <%= @quote.name %>
+      </h1>
+      
+      <div class="flex gap-2 mt-6">
+        <%= link_to "Edit", edit_quote_path(@quote), class: "btn btn-primary" %>
+        <%= link_to "Delete", quote_path(@quote), class: "btn btn-error", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  </div>
+</div>

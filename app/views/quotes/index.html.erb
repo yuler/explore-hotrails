@@ -1,0 +1,11 @@
+<div class="container mx-auto p-6 max-w-4xl">
+  <!-- Header -->
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold">Quotes</h1>
+    <%= link_to "New quote", new_quote_path, class: "btn btn-outline" %>
+  </div>
+  <!-- Quotes List -->
+  <div class="space-y-4">
+    <%= render @quotes %>
+  </div>
+</div>
