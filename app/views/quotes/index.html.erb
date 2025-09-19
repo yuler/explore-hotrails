@@ -9,6 +9,8 @@
 
   <%= turbo_frame_tag Quote.new %>
   
+  <%= turbo_stream_from "quotes" %>
+
   <!-- Quotes List -->
   <%= turbo_frame_tag "quotes" do %>
     <div class="space-y-4">
