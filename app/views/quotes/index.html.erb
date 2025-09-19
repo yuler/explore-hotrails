@@ -9,7 +9,7 @@
 
   <%= turbo_frame_tag Quote.new %>
   
-  <%= turbo_stream_from "quotes" %>
+  <%= turbo_stream_from [current_company, "quotes"] %>
 
   <!-- Quotes List -->
   <%= turbo_frame_tag "quotes" do %>
