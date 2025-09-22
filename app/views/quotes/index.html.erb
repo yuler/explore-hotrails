@@ -1,11 +1,9 @@
 <div class="container mx-auto p-6 max-w-4xl">
   <!-- Header -->
-  <%= turbo_frame_tag "header" do %>
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">Quotes</h1>
-      <%= link_to "New quote", new_quote_path, class: "btn btn-outline", data: { turbo_frame: dom_id(Quote.new) } %>
-    </div>
-  <% end %>
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold">Quotes</h1>
+    <%= link_to "New quote", new_quote_path, class: "btn btn-outline", data: { turbo_frame: dom_id(Quote.new) } %>
+  </div>
 
   <%= turbo_frame_tag Quote.new %>
   

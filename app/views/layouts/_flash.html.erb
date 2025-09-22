@@ -1,0 +1,10 @@
+<div id="flash">
+  <% flash.each do |flash_type, message| %>
+    <div role="alert" class="alert alert-error alert-soft fixed top-20 left-0 right-0 z-50 animate-fade"
+      data-controller="removals"
+      data-action="animationend->removals#remove"
+    >
+      <span><%= message %></span>
+    </div>
+  <% end %>
+</div>
